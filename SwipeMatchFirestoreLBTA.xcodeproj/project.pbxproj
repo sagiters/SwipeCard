@@ -15,6 +15,7 @@
 		0425EA92228098E9002E1DF6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA91228098E9002E1DF6 /* Extensions+UIView.swift */; };
 		042809F022833AC00089B719 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042809EF22833AC00089B719 /* User.swift */; };
 		042809F4228342240089B719 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042809F3228342240089B719 /* CardViewModel.swift */; };
+		042809F62283493C0089B719 /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042809F52283493C0089B719 /* Advertiser.swift */; };
 		0428C2812281EA1600E3EC75 /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C2802281EA1600E3EC75 /* HomeBottomControlsStackView.swift */; };
 		0428C2832281ED8500E3EC75 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C2822281ED8500E3EC75 /* TopNavigationStackView.swift */; };
 		0428C2852281F2B600E3EC75 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C2842281F2B600E3EC75 /* CardView.swift */; };
@@ -31,6 +32,7 @@
 		0425EA91228098E9002E1DF6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		042809EF22833AC00089B719 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		042809F3228342240089B719 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		042809F52283493C0089B719 /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		0428C2802281EA1600E3EC75 /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		0428C2822281ED8500E3EC75 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		0428C2842281F2B600E3EC75 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				042809EF22833AC00089B719 /* User.swift */,
+				042809F52283493C0089B719 /* Advertiser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				0425EA81228096DF002E1DF6 /* HomeController.swift in Sources */,
 				0428C2812281EA1600E3EC75 /* HomeBottomControlsStackView.swift in Sources */,
+				042809F62283493C0089B719 /* Advertiser.swift in Sources */,
 				0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */,
 				0425EA92228098E9002E1DF6 /* Extensions+UIView.swift in Sources */,
 				042809F4228342240089B719 /* CardViewModel.swift in Sources */,
