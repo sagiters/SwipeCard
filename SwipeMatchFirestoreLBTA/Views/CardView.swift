@@ -20,14 +20,21 @@ class CardView: UIView {
     
     // encapsulation
     fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
+    fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let infomationLabel = UILabel()
     
     // Configurations
     fileprivate let threshold: CGFloat = 80
     
-
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupLayout()
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        addGestureRecognizer(panGesture)
+    }
+    
+    fileprivate func setupLayout() {
         // custom drawing code
         layer.cornerRadius = 10
         clipsToBounds = true
@@ -36,21 +43,37 @@ class CardView: UIView {
         addSubview(imageView)
         imageView.fillSuperview()
         
+        // add a gradient layer somehow
+        setupGradientLayer()
+        
         addSubview(infomationLabel)
         infomationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 16, right: 16))
         
-        infomationLabel.text = "TEST NAME TEST NAME AGE"
         infomationLabel.textColor = .white
-        infomationLabel.font = UIFont.systemFont(ofSize: 34, weight: .heavy)
         infomationLabel.numberOfLines = 0
+    }
+    
+    fileprivate func setupGradientLayer() {
+        // how we can draw a gradient with Swift
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradientLayer.locations = [0.5, 1.1]
+        // self.frame is actually zero frame
         
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
-        addGestureRecognizer(panGesture)
+        layer.addSublayer(gradientLayer)
+    }
+    
+    override func layoutSubviews() {
+        // in here you know what you CardView frame will be
+        gradientLayer.frame = self.frame
     }
     
     @objc fileprivate func handlePan(gesture: UIPanGestureRecognizer) {
 
         switch gesture.state {
+        case .began:
+            superview?.subviews.forEach({ (subview) in
+                subview.layer.removeAllAnimations()
+            })
         case .changed:
             handleChanged(gesture)
         case .ended:
