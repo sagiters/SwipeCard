@@ -21,6 +21,7 @@
 		0428C2852281F2B600E3EC75 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C2842281F2B600E3EC75 /* CardView.swift */; };
 		042CA80E2287337E007342E9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA80D2287337E007342E9 /* RegistrationViewController.swift */; };
 		042CA810228737F1007342E9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA80F228737F1007342E9 /* CustomTextField.swift */; };
+		042CA81222874CD3007342E9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA81122874CD3007342E9 /* RegistrationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		0428C2842281F2B600E3EC75 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		042CA80D2287337E007342E9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		042CA80F228737F1007342E9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		042CA81122874CD3007342E9 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				0425EA80228096DF002E1DF6 /* HomeController.swift */,
 				042CA80D2287337E007342E9 /* RegistrationViewController.swift */,
+				042CA81122874CD3007342E9 /* RegistrationViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0425EA81228096DF002E1DF6 /* HomeController.swift in Sources */,
+				042CA81222874CD3007342E9 /* RegistrationViewModel.swift in Sources */,
 				042CA810228737F1007342E9 /* CustomTextField.swift in Sources */,
 				0428C2812281EA1600E3EC75 /* HomeBottomControlsStackView.swift in Sources */,
 				042809F62283493C0089B719 /* Advertiser.swift in Sources */,
