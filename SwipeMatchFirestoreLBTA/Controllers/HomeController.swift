@@ -29,10 +29,18 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+        
         setupLayout()
         setupDummyCards()
         
 
+    }
+    
+    @objc func handleSettings() {
+        print("Show registration page")
+        let registrationController = RegistrationViewController()
+        present(registrationController, animated: true, completion: nil)
     }
     
     fileprivate func setupDummyCards() {
