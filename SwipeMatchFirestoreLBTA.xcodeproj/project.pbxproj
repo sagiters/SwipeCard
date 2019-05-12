@@ -23,6 +23,7 @@
 		042CA810228737F1007342E9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA80F228737F1007342E9 /* CustomTextField.swift */; };
 		042CA81222874CD3007342E9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA81122874CD3007342E9 /* RegistrationViewModel.swift */; };
 		04909D0F2287FD17001D7A70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04909D0E2287FD17001D7A70 /* GoogleService-Info.plist */; };
+		04909D112288064C001D7A70 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04909D102288064C001D7A70 /* Bindable.swift */; };
 		606C5D12DCD5F2E0F8241E53 /* Pods_SwipeMatchFirestoreLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B089F20F2F2515DA373E69 /* Pods_SwipeMatchFirestoreLBTA.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		042CA80F228737F1007342E9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		042CA81122874CD3007342E9 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		04909D0E2287FD17001D7A70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04909D102288064C001D7A70 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		60B089F20F2F2515DA373E69 /* Pods_SwipeMatchFirestoreLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeMatchFirestoreLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E462E8420AE5FA58D7AB1B /* Pods-SwipeMatchFirestoreLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.debug.xcconfig"; sourceTree = "<group>"; };
 		FF8847078AFB8AB2C9153A1D /* Pods-SwipeMatchFirestoreLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeMatchFirestoreLBTA/Pods-SwipeMatchFirestoreLBTA.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				0425EA80228096DF002E1DF6 /* HomeController.swift */,
 				042CA80D2287337E007342E9 /* RegistrationViewController.swift */,
 				042CA81122874CD3007342E9 /* RegistrationViewModel.swift */,
+				04909D102288064C001D7A70 /* Bindable.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04909D112288064C001D7A70 /* Bindable.swift in Sources */,
 				0425EA81228096DF002E1DF6 /* HomeController.swift in Sources */,
 				042CA81222874CD3007342E9 /* RegistrationViewModel.swift in Sources */,
 				042CA810228737F1007342E9 /* CustomTextField.swift in Sources */,
