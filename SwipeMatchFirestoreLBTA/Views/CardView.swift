@@ -41,8 +41,6 @@ class CardView: UIView {
                 self?.imageView.sd_setImage(with: url)
             }
             
-            
-            
             self?.barsStackView.arrangedSubviews.forEach({ (v) in
                 v.backgroundColor = self?.barDeselectedColor
             })
