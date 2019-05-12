@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = RegistrationViewController()
+        window?.rootViewController = HomeController()
         
         return true
     }
