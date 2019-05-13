@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04231F3B2289D1F7002D7D5F /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3A2289D1F7002D7D5F /* SettingsController.swift */; };
 		0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA7E228096DF002E1DF6 /* AppDelegate.swift */; };
 		0425EA81228096DF002E1DF6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA80228096DF002E1DF6 /* HomeController.swift */; };
 		0425EA84228096DF002E1DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0425EA82228096DF002E1DF6 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04231F3A2289D1F7002D7D5F /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		0425EA7B228096DF002E1DF6 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0425EA7E228096DF002E1DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0425EA80228096DF002E1DF6 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				042CA80D2287337E007342E9 /* RegistrationViewController.swift */,
 				042CA81122874CD3007342E9 /* RegistrationViewModel.swift */,
 				04909D102288064C001D7A70 /* Bindable.swift */,
+				04231F3A2289D1F7002D7D5F /* SettingsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				042CA80E2287337E007342E9 /* RegistrationViewController.swift in Sources */,
 				0425EA92228098E9002E1DF6 /* Extensions+UIView.swift in Sources */,
 				042809F4228342240089B719 /* CardViewModel.swift in Sources */,
+				04231F3B2289D1F7002D7D5F /* SettingsController.swift in Sources */,
 				0428C2852281F2B600E3EC75 /* CardView.swift in Sources */,
 				0428C2832281ED8500E3EC75 /* TopNavigationStackView.swift in Sources */,
 				042809F022833AC00089B719 /* User.swift in Sources */,
