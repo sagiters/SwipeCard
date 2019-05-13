@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04231F3B2289D1F7002D7D5F /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3A2289D1F7002D7D5F /* SettingsController.swift */; };
+		04231F3D2289DA6B002D7D5F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3C2289DA6B002D7D5F /* SettingsCell.swift */; };
 		0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA7E228096DF002E1DF6 /* AppDelegate.swift */; };
 		0425EA81228096DF002E1DF6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA80228096DF002E1DF6 /* HomeController.swift */; };
 		0425EA84228096DF002E1DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0425EA82228096DF002E1DF6 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		04231F3A2289D1F7002D7D5F /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		04231F3C2289DA6B002D7D5F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		0425EA7B228096DF002E1DF6 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0425EA7E228096DF002E1DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0425EA80228096DF002E1DF6 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				0428C2822281ED8500E3EC75 /* TopNavigationStackView.swift */,
 				0428C2842281F2B600E3EC75 /* CardView.swift */,
 				042CA80F228737F1007342E9 /* CustomTextField.swift */,
+				04231F3C2289DA6B002D7D5F /* SettingsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				0428C2852281F2B600E3EC75 /* CardView.swift in Sources */,
 				0428C2832281ED8500E3EC75 /* TopNavigationStackView.swift in Sources */,
 				042809F022833AC00089B719 /* User.swift in Sources */,
+				04231F3D2289DA6B002D7D5F /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
