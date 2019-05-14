@@ -111,18 +111,27 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     
     fileprivate func fetchCurrentUser() {
         // fetch some Firestore Data
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+//            if let err = err {
+//                print(err)
+//                return
+//            }
+//
+//            // fetched our user here
+//            guard let dictionary = snapshot?.data() else { return }
+//            self.user = User(dictionary: dictionary)
+//            self.loadUserPhotos()
+//
+//            self.tableView.reloadData()
+//        }
+        Firestore.firestore().fetchCurrentUser { (user, err) in
             if let err = err {
-                print(err)
+                print("Failed to fetch user:", err)
                 return
             }
-            
-            // fetched our user here
-            guard let dictionary = snapshot?.data() else { return }
-            self.user = User(dictionary: dictionary)
+            self.user = user
             self.loadUserPhotos()
-            
             self.tableView.reloadData()
         }
     }
@@ -210,11 +219,12 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     @objc fileprivate func handleMinAgeChange(slider: UISlider) {
 //        print(slider.value)
         // I want to update the minLabel in my ageRangeCell someHow...
-        let indexPath = IndexPath(row: 0, section: 5)
-        let ageRangeCell =  tableView.cellForRow(at: indexPath) as! AgeRangeCell
-        ageRangeCell.minLabel.text = "Min: \(Int(slider.value))"
-        
-        self.user?.minSeekingAge = Int(slider.value)
+//        let indexPath = IndexPath(row: 0, section: 5)
+//        let ageRangeCell =  tableView.cellForRow(at: indexPath) as! AgeRangeCell
+//        ageRangeCell.minLabel.text = "Min: \(Int(slider.value))"
+//
+//        self.user?.minSeekingAge = Int(slider.value)
+        evaluateMinMax()
     }
     
     @objc fileprivate func handleMaxAgeChange(slider: UISlider) {
@@ -224,6 +234,20 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         
         self.user?.maxSeekingAge = Int(slider.value)
         
+    }
+    
+    fileprivate func evaluateMinMax() {
+        
+        guard let ageRangeCell = tableView.cellForRow(at: [5, 0]) as? AgeRangeCell else { return }
+        let minValue = Int(ageRangeCell.minSlider.value)
+        var maxValue = Int(ageRangeCell.maxSlider.value)
+        maxValue = max(minValue, maxValue)
+        ageRangeCell.maxSlider.value = Float(maxValue)
+        ageRangeCell.minLabel.text = "Min \(minValue)"
+        ageRangeCell.maxLabel.text = "Max \(maxValue)"
+        
+        user?.minSeekingAge = minValue
+        user?.maxSeekingAge = maxValue
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

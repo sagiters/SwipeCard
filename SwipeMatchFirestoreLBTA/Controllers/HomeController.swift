@@ -48,20 +48,34 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     }
     
     fileprivate var user: User?
+    fileprivate let hud = JGProgressHUD(style: .dark)
     
     fileprivate func fetchCurrentUser() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+//            if let err = err {
+//                print(err)
+//                return
+//            }
+//
+//            // fetched our user here
+//            guard let dictionary = snapshot?.data() else { return }
+//            self.user = User(dictionary: dictionary)
+//            self.fetchUsersFromFirestore()
+//
+//        }
+        
+        hud.textLabel.text = "Loading"
+        hud.show(in: view)
+        cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
+        Firestore.firestore().fetchCurrentUser { (user, err) in
             if let err = err {
-                print(err)
+                print("Failed to fetch user:", err)
+                self.hud.dismiss()
                 return
             }
-            
-            // fetched our user here
-            guard let dictionary = snapshot?.data() else { return }
-            self.user = User(dictionary: dictionary)
+            self.user = user
             self.fetchUsersFromFirestore()
-            
         }
     }
     
@@ -74,14 +88,14 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     fileprivate func fetchUsersFromFirestore() {
         guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
         
-        let hud = JGProgressHUD(style: .dark)
-        hud.textLabel.text = "Fetching Users"
-        hud.show(in: view)
+//        let hud = JGProgressHUD(style: .dark)
+//        hud.textLabel.text = "Fetching Users"
+//        hud.show(in: view)
         
         // i will introduce pagination here to page through 2 users at a time
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
         query.getDocuments { (snapshot, err) in
-            hud.dismiss()
+            self.hud.dismiss()
             if let err = err {
                 print("Failed to fetch users:", err)
                 return
