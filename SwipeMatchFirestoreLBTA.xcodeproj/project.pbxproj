@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042147A6228B223400A72C3B /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042147A5228B223400A72C3B /* AgeRangeCell.swift */; };
 		04231F3B2289D1F7002D7D5F /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3A2289D1F7002D7D5F /* SettingsController.swift */; };
 		04231F3D2289DA6B002D7D5F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3C2289DA6B002D7D5F /* SettingsCell.swift */; };
 		0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA7E228096DF002E1DF6 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042147A5228B223400A72C3B /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
 		04231F3A2289D1F7002D7D5F /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		04231F3C2289DA6B002D7D5F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		0425EA7B228096DF002E1DF6 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				0428C2842281F2B600E3EC75 /* CardView.swift */,
 				042CA80F228737F1007342E9 /* CustomTextField.swift */,
 				04231F3C2289DA6B002D7D5F /* SettingsCell.swift */,
+				042147A5228B223400A72C3B /* AgeRangeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				0428C2812281EA1600E3EC75 /* HomeBottomControlsStackView.swift in Sources */,
 				042809F62283493C0089B719 /* Advertiser.swift in Sources */,
 				0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */,
+				042147A6228B223400A72C3B /* AgeRangeCell.swift in Sources */,
 				042CA80E2287337E007342E9 /* RegistrationViewController.swift in Sources */,
 				0425EA92228098E9002E1DF6 /* Extensions+UIView.swift in Sources */,
 				042809F4228342240089B719 /* CardViewModel.swift in Sources */,
