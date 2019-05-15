@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041FF991228C6C08008F8D75 /* UserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FF990228C6C08008F8D75 /* UserDetailsController.swift */; };
 		042147A6228B223400A72C3B /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042147A5228B223400A72C3B /* AgeRangeCell.swift */; };
 		042147AA228B33E300A72C3B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042147A8228B33E200A72C3B /* LoginController.swift */; };
 		042147AB228B33E300A72C3B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042147A9228B33E300A72C3B /* LoginViewModel.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041FF990228C6C08008F8D75 /* UserDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsController.swift; sourceTree = "<group>"; };
 		042147A5228B223400A72C3B /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
 		042147A8228B33E200A72C3B /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		042147A9228B33E300A72C3B /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041FF98F228C6BEE008F8D75 /* User Details */ = {
+			isa = PBXGroup;
+			children = (
+				041FF990228C6C08008F8D75 /* UserDetailsController.swift */,
+			);
+			path = "User Details";
+			sourceTree = "<group>";
+		};
 		042147A7228B33B000A72C3B /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		042809F1228341710089B719 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				041FF98F228C6BEE008F8D75 /* User Details */,
 				042147A7228B33B000A72C3B /* Login */,
 				0425EA80228096DF002E1DF6 /* HomeController.swift */,
 				042CA80D2287337E007342E9 /* RegistrationViewController.swift */,
@@ -334,6 +345,7 @@
 				0428C2812281EA1600E3EC75 /* HomeBottomControlsStackView.swift in Sources */,
 				042809F62283493C0089B719 /* Advertiser.swift in Sources */,
 				0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */,
+				041FF991228C6C08008F8D75 /* UserDetailsController.swift in Sources */,
 				042147A6228B223400A72C3B /* AgeRangeCell.swift in Sources */,
 				042147AB228B33E300A72C3B /* LoginViewModel.swift in Sources */,
 				042CA80E2287337E007342E9 /* RegistrationViewController.swift in Sources */,
