@@ -37,10 +37,10 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         print("HomeController did appear")
         // you want to kick the user out when they log out
         if Auth.auth().currentUser == nil {
-            let loginController = LoginController()
-            loginController.delegate = self
-            let navController = UINavigationController(rootViewController: loginController)
-            present(navController, animated: true, completion: nil)
+            let registrationController = RegistrationViewController()
+            registrationController.delegate = self
+            let navController = UINavigationController(rootViewController: registrationController)
+            present(navController, animated: true)
         }
         
     }
@@ -88,7 +88,10 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     var lastFetchedUser: User?
     
     fileprivate func fetchUsersFromFirestore() {
-        guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
+//        guard let minAge = user?.minSeekingAge, let maxAge = user?.maxSeekingAge else { return }
+        
+        let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
+        let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
         
 //        let hud = JGProgressHUD(style: .dark)
 //        hud.textLabel.text = "Fetching Users"
