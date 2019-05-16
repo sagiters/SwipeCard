@@ -19,13 +19,13 @@ class CardView: UIView {
     
     var cardViewModel: CardViewModel! {
         didSet {
-            let imageName = cardViewModel.imageUrls.first ?? ""
-            //load our image using some kind of url instead
-            if let url = URL(string: imageName) {
-//                imageView.sd_setImage(with: url)
-                imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "photo_placeholder"), options: .continueInBackground, completed: nil)
-            }
-            
+//            let imageName = cardViewModel.imageUrls.first ?? ""
+//            load our image using some kind of url instead
+//            if let url = URL(string: imageName) {
+////                imageView.sd_setImage(with: url)
+//                imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "photo_placeholder"), options: .continueInBackground, completed: nil)
+//            }
+            swipingPhotoController.cardViewModel = self.cardViewModel
             
             infomationLabel.attributedText = cardViewModel.attributedString
             infomationLabel.textAlignment = cardViewModel.textAlignment
@@ -44,9 +44,9 @@ class CardView: UIView {
     fileprivate func setupImageIndexObserver() {
         cardViewModel.imageIndexObserver = { [weak self] (idx, imageUrl) in
             print("Changing photo from view model")
-            if let url = URL(string: imageUrl ?? "") {
-                self?.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "photo_placeholder"), options: .continueInBackground, completed: nil)
-            }
+//            if let url = URL(string: imageUrl ?? "") {
+//                self?.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "photo_placeholder"), options: .continueInBackground, completed: nil)
+//            }
             
             self?.barsStackView.arrangedSubviews.forEach({ (v) in
                 v.backgroundColor = self?.barDeselectedColor
@@ -56,7 +56,10 @@ class CardView: UIView {
     }
     
     // encapsulation
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
+//    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))
+    // replace it with a UIPageViewController component which is our SwipingPhotoController
+    fileprivate let swipingPhotoController = SwipingPhotosController(isCardViewMode: true)
+    
     fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let infomationLabel = UILabel()
     
@@ -111,11 +114,11 @@ class CardView: UIView {
         layer.cornerRadius = 10
         clipsToBounds = true
         
-        imageView.contentMode = .scaleAspectFill
-        addSubview(imageView)
-        imageView.fillSuperview()
+        let swipingPhotoView = swipingPhotoController.view!
+        addSubview(swipingPhotoView)
+        swipingPhotoView.fillSuperview()
         
-        setupBarsStackView()
+//        setupBarsStackView()
         
         // add a gradient layer somehow
         setupGradientLayer()

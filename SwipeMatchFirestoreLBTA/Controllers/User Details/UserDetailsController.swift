@@ -35,7 +35,7 @@ class UserDetailsController: UIViewController, UIScrollViewDelegate {
 //    }()
     
     // how do i swap out a UIImageView with a UIViewController component
-    let swipingPhotosController = SwipingPhotosController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    let swipingPhotosController = SwipingPhotosController(isCardViewMode: false)
     
     let infoLabel: UILabel = {
         let label = UILabel()
