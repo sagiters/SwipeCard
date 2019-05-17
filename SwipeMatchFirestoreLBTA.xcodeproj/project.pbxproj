@@ -16,6 +16,7 @@
 		04231F3B2289D1F7002D7D5F /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3A2289D1F7002D7D5F /* SettingsController.swift */; };
 		04231F3D2289DA6B002D7D5F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3C2289DA6B002D7D5F /* SettingsCell.swift */; };
 		04259B57228DD0EE00360F35 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259B56228DD0EE00360F35 /* PhotoController.swift */; };
+		04259F83228E8BEE00CB834A /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259F82228E8BEE00CB834A /* MatchView.swift */; };
 		0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA7E228096DF002E1DF6 /* AppDelegate.swift */; };
 		0425EA81228096DF002E1DF6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA80228096DF002E1DF6 /* HomeController.swift */; };
 		0425EA84228096DF002E1DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0425EA82228096DF002E1DF6 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		04231F3A2289D1F7002D7D5F /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		04231F3C2289DA6B002D7D5F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		04259B56228DD0EE00360F35 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		04259F82228E8BEE00CB834A /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		0425EA7B228096DF002E1DF6 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0425EA7E228096DF002E1DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0425EA80228096DF002E1DF6 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				042CA80F228737F1007342E9 /* CustomTextField.swift */,
 				04231F3C2289DA6B002D7D5F /* SettingsCell.swift */,
 				042147A5228B223400A72C3B /* AgeRangeCell.swift */,
+				04259F82228E8BEE00CB834A /* MatchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				042809F62283493C0089B719 /* Advertiser.swift in Sources */,
 				0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */,
 				041FF991228C6C08008F8D75 /* UserDetailsController.swift in Sources */,
+				04259F83228E8BEE00CB834A /* MatchView.swift in Sources */,
 				042147A6228B223400A72C3B /* AgeRangeCell.swift in Sources */,
 				042147AB228B33E300A72C3B /* LoginViewModel.swift in Sources */,
 				042CA80E2287337E007342E9 /* RegistrationViewController.swift in Sources */,
