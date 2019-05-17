@@ -196,25 +196,42 @@ class CardView: UIView {
         let translationDirection: CGFloat = gesture.translation(in: nil).x > 0 ? 1 : -1
         let shouldDismissCard = abs(gesture.translation(in: nil).x) > threshold
         
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
-            if shouldDismissCard {
-                
-                self.frame = CGRect(x: 600 * translationDirection, y: 0, width: self.frame.width, height: self.frame.height)
-                
-            } else {
-                self.transform = .identity
-            }
-        }) { (_) in
-            self.transform = .identity
-            if shouldDismissCard {
-                self.removeFromSuperview()
-                
-                // reset topCardView inside of HomeController somehow
-                self.delegate?.didRemoveCard(cardView: self)
+        if shouldDismissCard {
+            // hack solution
+            guard let homeController = self.delegate as? HomeController else {
+                return
             }
             
-//            self.frame = CGRect(x: 0, y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
+            if translationDirection == 1 {
+                homeController.handleLike()
+            } else {
+                homeController.handleDislike()
+            }
+        } else {
+            UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+                self.transform = .identity
+            }, completion: nil)
         }
+
+//        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+//            if shouldDismissCard {
+//
+//                self.frame = CGRect(x: 600 * translationDirection, y: 0, width: self.frame.width, height: self.frame.height)
+//
+//            } else {
+//                self.transform = .identity
+//            }
+//        }) { (_) in
+//            self.transform = .identity
+//            if shouldDismissCard {
+//                self.removeFromSuperview()
+//
+//                // reset topCardView inside of HomeController somehow
+//                self.delegate?.didRemoveCard(cardView: self)
+//            }
+//
+////            self.frame = CGRect(x: 0, y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
+//        }
     }
     
     required init?(coder aDecoder: NSCoder) {
