@@ -17,6 +17,8 @@
 		04231F3D2289DA6B002D7D5F /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04231F3C2289DA6B002D7D5F /* SettingsCell.swift */; };
 		04259B57228DD0EE00360F35 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259B56228DD0EE00360F35 /* PhotoController.swift */; };
 		04259F83228E8BEE00CB834A /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259F82228E8BEE00CB834A /* MatchView.swift */; };
+		04259F85228E92E500CB834A /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259F84228E92E500CB834A /* SendMessageButton.swift */; };
+		04259F87228E967500CB834A /* KeepSwipingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04259F86228E967500CB834A /* KeepSwipingButton.swift */; };
 		0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA7E228096DF002E1DF6 /* AppDelegate.swift */; };
 		0425EA81228096DF002E1DF6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425EA80228096DF002E1DF6 /* HomeController.swift */; };
 		0425EA84228096DF002E1DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0425EA82228096DF002E1DF6 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		04231F3C2289DA6B002D7D5F /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		04259B56228DD0EE00360F35 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		04259F82228E8BEE00CB834A /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		04259F84228E92E500CB834A /* SendMessageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
+		04259F86228E967500CB834A /* KeepSwipingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepSwipingButton.swift; sourceTree = "<group>"; };
 		0425EA7B228096DF002E1DF6 /* SwipeMatchFirestoreLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeMatchFirestoreLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0425EA7E228096DF002E1DF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0425EA80228096DF002E1DF6 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 				04231F3C2289DA6B002D7D5F /* SettingsCell.swift */,
 				042147A5228B223400A72C3B /* AgeRangeCell.swift */,
 				04259F82228E8BEE00CB834A /* MatchView.swift */,
+				04259F84228E92E500CB834A /* SendMessageButton.swift */,
+				04259F86228E967500CB834A /* KeepSwipingButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				042809F62283493C0089B719 /* Advertiser.swift in Sources */,
 				0425EA7F228096DF002E1DF6 /* AppDelegate.swift in Sources */,
 				041FF991228C6C08008F8D75 /* UserDetailsController.swift in Sources */,
+				04259F87228E967500CB834A /* KeepSwipingButton.swift in Sources */,
 				04259F83228E8BEE00CB834A /* MatchView.swift in Sources */,
 				042147A6228B223400A72C3B /* AgeRangeCell.swift in Sources */,
 				042147AB228B33E300A72C3B /* LoginViewModel.swift in Sources */,
@@ -368,6 +375,7 @@
 				0428C2852281F2B600E3EC75 /* CardView.swift in Sources */,
 				0428C2832281ED8500E3EC75 /* TopNavigationStackView.swift in Sources */,
 				042809F022833AC00089B719 /* User.swift in Sources */,
+				04259F85228E92E500CB834A /* SendMessageButton.swift in Sources */,
 				04231F3D2289DA6B002D7D5F /* SettingsCell.swift in Sources */,
 				041FF993228C7D7C008F8D75 /* SwipingPhotosController.swift in Sources */,
 			);
